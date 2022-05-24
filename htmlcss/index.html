@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8">
     <title>Private Aviation</title>
+	<script src="script.js"></script>
 </head>
 
 <body>
@@ -16,6 +17,8 @@
 	<li><a href="#things-to-do">Things to do with your licence</a></li>
 </ul>
 <div id="main-page">
+	<button onclick="confirm('Are you sure?')">Delete</button>
+
 	<h1>All About Private Aviation</h1>
 	<h2 id="what-is">What is Private Aviation?</h2>
 	<p id="first-para">When we think about an aeroplane, we normally think about 
@@ -117,6 +120,23 @@
 		</ul>
 	</div>
 </div>
+
+<section class="form">
+	<div class="form-intro">
+		<h2>Sign up for more information</h2>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, molestiae repudiandae! Delectus ipsam numquam nam vero nesciunt quibusdam nisi eos ea, asperiores ducimus tempore, temporibus nemo adipisci mollitia odit consequuntur.</p>
+	</div>
+
+	<form action="moreDetails.asp" method="post">
+		<label for="name">Name:</label>
+		<input type="text" name="name">
+		<label for="email">Email:</label>
+		<input type="email" name="email">
+		<input type="submit" value="submit">
+	</form>
+</section>
+
+
 
 </body>
 

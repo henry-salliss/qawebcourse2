@@ -60,7 +60,7 @@ img {
 	border-right: 1px solid #555;
 	position: fixed;
 	left:0;
-	height: 100%;
+	height: fit-content;
 	overflow: auto;
 }
 #toc a {
@@ -81,4 +81,22 @@ img {
 #main-page {
 	margin-left:200px;
 	padding-left:6px;
+}
+
+.form{
+	width: 50%;
+	margin: auto;
+	margin-top: 10%;
+}
+
+form{
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+input{
+	width: 100px;
+	margin: 1%;
 }
