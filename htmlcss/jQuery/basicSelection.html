@@ -5,6 +5,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
     <script>
+        $(document).ready(function(){
+            $.getJSON('https://httpbin.org/anything', function(data){
+                console.log(data)
+                $.each(data, (index, item) => {
+                    console.log(item)
+                })
+            })
+        })
+
         function displayInfo() {
             const product = $('#productName').val()
             const quantity = +$('#qty').val()
