@@ -71,7 +71,7 @@ const getNames = () => {
     for(let i = 0; i < names.length; i++){
         result += `${names[i]} `;
         
-        div.innerHTML = names;
+        div.innerHTML = result;
     }
 
     return result;
@@ -119,5 +119,3 @@ const json = `{
 const parsedJSON = JSON.parse(json)
 console.log(parsedJSON)
 console.log(parsedJSON.glossary.title)
-// console.log(json.glossary.title)
-// console.log(json.glossary.GlossDef.para)
