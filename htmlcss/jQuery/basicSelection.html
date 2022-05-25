@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        function displayInfo() {
+            const product = $('#productName').val()
+            const quantity = +$('#qty').val()
+            const delivery = $('#delivery:checked').val() == 'y'
+            
+            const div = $('<div></div');
+            $(`<p>${product}</p>`).appendTo(div);
+            $(`<p>${quantity}</p>`).appendTo(div);
+            $(`<p>${delivery}</p>`).appendTo(div);
+
+            $(div).appendTo($('form'))
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Example page</h1>
+    
+    <form onsubmit="displayInfo(); return false;">
+        <p>Enter the name of the product you want to buy: <input type="text" id="productName"/></p>
+        <p>Enter the quantity you want to buy: <input type="text" id="qty" /></p>
+        <p>Do you require delivery? <input type="checkbox" id="delivery" value="y" /></p>
+        <p><input type="submit" value="Place order" /></p>
+    </form>
+</body>
+</html>
