@@ -9,16 +9,25 @@
     <script src="lab2.js"></script>
 </head>
 <body ng-app="myModule" ng-controller="myController">
+    <button ng-click="btnClick()">click me</button>
+
     <p>{{testMessage}}</p>
     <p>{{products[0].name}}</p>
     <p>{{products[2].name}}</p>
 
     <table border="1">
-        <tr ng-repeat="product in products">
+        <tr ng-repeat="product in products" ng-click="products.selectProduct(product)">
             <td>{{product.name}}</td>
             <td>{{product.unitPrice}}</td>
             <td>{{product.stockLevel}}</td>
         </tr>
     </table>
+
+    <div ng-hide="currentProduct == null">
+        <p>{{currentProduct.name}}</p>
+        <p>{{currentProduct.unitPrice}}</p>
+    </div>
+
+    <img src="img/star-wars-obi-wan-kenobi-ewan-mcgregor.webp" alt="obi wan" ng-click="getDetails($event)">
 </body>
 </html>
