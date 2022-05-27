@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 2 code</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="lab2.js"></script>
+    <script src="labs.js"></script>
 </head>
 <body ng-app="myModule" ng-controller="myController">
     <button ng-click="btnClick()">click me</button>
@@ -28,6 +28,13 @@
         <p>{{currentProduct.unitPrice}}</p>
     </div>
 
+    <button ng-click="call()">get character</button>
+    <div ng-hide="ajaxMessage == null">{{ajaxMessage}}</div>
+    <div ng-hide="character == null">
+        <p>{{character.name}}</p>
+    </div>
+    <br>
     <img src="img/star-wars-obi-wan-kenobi-ewan-mcgregor.webp" alt="obi wan" ng-click="getDetails($event)">
+
 </body>
 </html>
